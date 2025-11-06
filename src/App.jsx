@@ -1,23 +1,20 @@
 import React from 'react';
-import DashboardHeader from './components/DashboardHeader';
-import AnalyticsCharts from './components/AnalyticsCharts';
-import PurchasesTable from './components/PurchasesTable';
-import ProductsManager from './components/ProductsManager';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import ProductGrid from './components/ProductGrid';
+import Blog from './components/Blog';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-black to-blue-950/30 text-white">
-      <div className="mx-auto max-w-7xl px-4 md:px-6 py-6 md:py-10">
-        <DashboardHeader />
-
-        <div className="mt-6 grid gap-4">
-          <AnalyticsCharts />
-          <div className="grid md:grid-cols-2 gap-4">
-            <PurchasesTable />
-            <ProductsManager />
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen bg-black text-white">
+      <Navbar />
+      <main>
+        <Hero />
+        <ProductGrid />
+        <Blog />
+      </main>
+      <Footer />
     </div>
   );
 }
